@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abhishek Yeshwant Jadhav - Biodata</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Gotu&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Cinzel:wght@400;500;600;700&amp;family=Gotu&amp;family=Raleway:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -465,6 +465,11 @@
 
   /* Print Styles - Same as screen, fit to one page */
   @media print {
+    ::selection {
+      background: transparent;
+      color: inherit;
+    }
+
     @page {
       size: A4;
       margin: 0;
@@ -481,6 +486,7 @@
       margin: 0; 
       background: none; 
       display: block;
+      min-height: 0;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
@@ -503,6 +509,15 @@
       break-inside: avoid;
       page-break-after: avoid;
       page-break-inside: avoid;
+    }
+    .shree,
+    .header-ornament,
+    .divine-symbol,
+    .name-main,
+    .name-sub {
+      background: transparent !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
     }
   }
 
@@ -604,7 +619,7 @@
             </div>
             <div class="info-item">
               <span class="info-label">Caste</span>
-              <span class="info-value">Bhavsar (Kshatriya)</span>
+              <span class="info-value">Kshatriya - Bhavsar</span>
             </div>
             <div class="info-item">
               <span class="info-label">Gotra</span>
@@ -664,7 +679,7 @@
             </div>
             <div class="info-item">
               <span class="info-label">Father's Occupation</span>
-              <span class="info-value">Business</span>
+              <span class="info-value">Business - Govt. Contractor</span>
             </div>
             <div class="info-item">
               <span class="info-label">Mother</span>
@@ -776,6 +791,9 @@
   window.addEventListener('load', fitPageToScreen);
   window.addEventListener('resize', fitPageToScreen);
   fitPageToScreen();
+  if (document.fonts) {
+    document.fonts.ready.then(fitPageToScreen);
+  }
   window.addEventListener('beforeprint', () => {
     pageShell.style.setProperty('--page-scale', 1);
     pageShell.style.width = '210mm';

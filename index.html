@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abhishek Yeshwant Jadhav — Biodata</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600;700&family=Gotu&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600;700&family=Gotu&family=Raleway:wght@300;400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&family=Noto+Serif+Devanagari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -83,7 +83,7 @@ body {
 }
 .watermark svg { width: 520px; height: 520px; }
 
-/* ── Outer / Inner Border ───────────────────── */
+/* ── Borders ────────────────────────────────── */
 .border-outer {
   position: absolute;
   top: 12px; left: 12px; right: 12px; bottom: 12px;
@@ -123,7 +123,6 @@ body {
   overflow: hidden;
   border-bottom: 1px solid var(--gold);
 }
-
 .header-glow {
   position: absolute;
   top: -40px; left: 50%;
@@ -132,14 +131,12 @@ body {
   background: radial-gradient(ellipse, rgba(201,168,76,0.18) 0%, transparent 70%);
   pointer-events: none;
 }
-
 .header-shimmer {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, transparent 100%);
 }
-
 .shree {
   font-family: 'Gotu', sans-serif;
   color: var(--gold);
@@ -148,7 +145,6 @@ body {
   margin-bottom: 2px;
   opacity: 0.9;
 }
-
 .biodata-tag {
   font-family: 'Raleway', sans-serif;
   font-size: 7px;
@@ -159,7 +155,6 @@ body {
   opacity: 0.6;
   margin-bottom: 5px;
 }
-
 .ganesh {
   font-family: 'Gotu', sans-serif;
   font-size: 18px;
@@ -169,8 +164,6 @@ body {
   margin-bottom: 6px;
   text-shadow: 0 0 20px rgba(201,168,76,0.3);
 }
-
-/* Gold rule with diamond */
 .hdr-rule {
   display: flex;
   align-items: center;
@@ -179,8 +172,7 @@ body {
   margin: 4px 0 8px;
 }
 .hdr-rule-line {
-  height: 1px;
-  width: 100px;
+  height: 1px; width: 100px;
   background: linear-gradient(90deg, transparent, var(--gold));
 }
 .hdr-rule-line.r { background: linear-gradient(90deg, var(--gold), transparent); }
@@ -190,7 +182,6 @@ body {
   transform: rotate(45deg);
   flex-shrink: 0;
 }
-
 .name-en {
   font-family: 'Cinzel', serif;
   font-size: 36px;
@@ -243,7 +234,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .main-grid {
   display: grid;
   grid-template-columns: 1fr 200px;
@@ -254,14 +244,12 @@ body {
 
 /* ── Section ────────────────────────────────── */
 .section { margin-bottom: 11px; }
-
 .section-header {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 8px;
 }
-
 .section-title {
   font-family: 'Cinzel', serif;
   font-size: 9.5px;
@@ -271,7 +259,6 @@ body {
   color: var(--maroon);
   white-space: nowrap;
 }
-
 .section-line {
   flex: 1;
   height: 1px;
@@ -293,12 +280,11 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 4px 18px;
 }
-
 .info-item {
   display: flex;
   flex-direction: column;
   padding-bottom: 4px;
-  border-bottom: 1px solid rgba(160, 137, 106, 0.15);
+  border-bottom: 1px solid rgba(160,137,106,0.15);
 }
 .info-item.full { grid-column: 1 / -1; }
 
@@ -311,7 +297,6 @@ body {
   color: var(--muted-light);
   margin-bottom: 1px;
 }
-
 .info-value {
   font-family: 'Cormorant Garamond', serif;
   font-size: 14.5px;
@@ -339,14 +324,116 @@ body {
   border-radius: 2px;
 }
 
+/* ══════════════════════════════════════════════
+   MARATHI LANGUAGE — ELEGANT DEVANAGARI
+   Tiro Devanagari Marathi: calligraphic, royal.
+   All sizes carefully tuned so content fits
+   exactly within one A4 page (794×1123px).
+   Devanagari glyphs render ~15% taller than
+   Latin at equal px, so we compensate below.
+   ══════════════════════════════════════════════ */
+
+/* Tighten section gaps in Marathi mode */
+.lang-mr .section          { margin-bottom: 7px; }
+.lang-mr .section-header   { margin-bottom: 5px; }
+.lang-mr .info-grid        { gap: 2px 18px; }
+.lang-mr .info-item        { padding-bottom: 2px; }
+.lang-mr .main-grid        { margin-top: 12px; gap: 22px; }
+
+/* Labels — stay Raleway, tighter tracking */
+.lang-mr .info-label {
+  font-size: 7.5px;
+  letter-spacing: 1.2px;
+}
+
+/* Values — Tiro Devanagari, bigger than English but line-height kept tight */
+.lang-mr .info-value {
+  font-family: 'Tiro Devanagari Marathi', 'Noto Serif Devanagari', Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.1px;
+}
+
+.lang-mr .info-value.accent {
+  font-family: 'Tiro Devanagari Marathi', 'Noto Serif Devanagari', Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--maroon);
+  line-height: 1.3;
+}
+
+/* About Me — slightly smaller, normal style (no italic in Devanagari) */
+.lang-mr .info-value.about-text {
+  font-family: 'Tiro Devanagari Marathi', 'Noto Serif Devanagari', Georgia, serif;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
+  color: #3A3028;
+}
+
+/* Horoscope tag */
+.lang-mr .tag {
+  font-family: 'Tiro Devanagari Marathi', 'Noto Serif Devanagari', Georgia, serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 1px 8px;
+}
+
+/* Section titles stay Cinzel (Latin script) */
+.lang-mr .section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 9.5px;
+}
+
+/* Expectations — readable but compact */
+.lang-mr .expectations-text {
+  font-family: 'Tiro Devanagari Marathi', 'Noto Serif Devanagari', Georgia, serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.65;
+  letter-spacing: 0.1px;
+}
+
+/* Expectations box — slightly less padding in Marathi */
+.lang-mr .expectations-box { padding: 8px 20px; }
+
+/* Address */
+.lang-mr .address-text {
+  font-family: 'Tiro Devanagari Marathi', 'Noto Serif Devanagari', Georgia, serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.05px;
+}
+
+/* Address bar — tighter */
+.lang-mr .address-bar { padding: 5px 42px; margin-top: 7px; }
+
+/* Contact — numbers stay Latin, labels stay Raleway */
+.lang-mr .contact-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+.lang-mr .contact-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+}
+
+/* Footer tighter */
+.lang-mr .footer { padding: 6px 42px 14px; }
+
 /* ── Photo Column ───────────────────────────── */
 .photo-col {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
-/* Arched portrait frame */
 .photo-arch {
   position: relative;
   border: 1px solid var(--gold);
@@ -382,9 +469,7 @@ body {
   border-radius: 83px 83px 0 0;
   gap: 6px;
 }
-.photo-arch .photo-placeholder svg {
-  opacity: 0.3;
-}
+.photo-arch .photo-placeholder svg { opacity: 0.3; }
 .photo-arch .photo-placeholder span {
   font-family: 'Cinzel', serif;
   font-size: 8px;
@@ -395,8 +480,6 @@ body {
   text-transform: uppercase;
   line-height: 1.6;
 }
-
-/* Secondary square */
 .photo-sq {
   border: 1px solid var(--gold);
   padding: 4px;
@@ -428,7 +511,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Contact card */
+/* ── Contact Card ───────────────────────────── */
 .contact-card {
   background: linear-gradient(150deg, var(--maroon) 0%, var(--maroon-deep) 100%);
   border: 1px solid var(--gold);
@@ -487,19 +570,16 @@ body {
   margin: 6px auto;
 }
 
-/* ── Bottom section ─────────────────────────── */
+/* ── Bottom ─────────────────────────────────── */
 .bottom {
   flex: 0 0 auto;
   position: relative;
   z-index: 1;
 }
-
-/* Expectations */
 .expectations-wrap {
   padding: 0 42px;
   margin-bottom: 0;
 }
-
 .expectations-box {
   background: linear-gradient(135deg, rgba(92,10,24,0.03) 0%, rgba(201,168,76,0.05) 100%);
   border: 1px solid var(--border-gold);
@@ -527,8 +607,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
-/* Address bar */
 .address-bar {
   margin-top: 10px;
   border-top: 1px solid var(--border-gold);
@@ -550,8 +628,6 @@ body {
   text-align: center;
   line-height: 1.4;
 }
-
-/* Footer */
 .footer {
   padding: 8px 42px 16px;
   display: flex;
@@ -678,7 +754,7 @@ body {
     <button class="lang-btn" onclick="toggleLang()" id="langBtn">मराठीत बघा</button>
   </div>
 
-  <!-- ── HEADER ── -->
+  <!-- HEADER -->
   <div class="header">
     <div class="header-glow"></div>
     <div class="shree">॥ श्री ॥</div>
@@ -694,7 +770,7 @@ body {
     <div class="header-shimmer"></div>
   </div>
 
-  <!-- ── BODY ── -->
+  <!-- BODY -->
   <div class="body">
     <div class="main-grid">
 
@@ -790,7 +866,7 @@ body {
         </div>
 
         <!-- About Me -->
-        <div class="section" id="about-section">
+        <div class="section">
           <div class="section-header">
             <div class="section-title" data-key="About Me">About Me</div>
             <div class="section-line"></div>
@@ -850,21 +926,18 @@ body {
           </div>
         </div>
 
-      </div>
+      </div><!-- /info-col -->
 
       <!-- Right: Photos -->
       <div class="photo-col">
-
         <div class="photo-arch">
           <img src="portrait-photo.jpg" alt="Abhishek — Portrait"
             onerror="this.outerHTML='<div class=\'photo-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#8B6914\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M4 20c0-4 3.6-7 8-7s8 3 8 7\'/></svg><span>Portrait<br>portrait-photo.jpg</span></div>'">
         </div>
-
         <div class="photo-sq">
           <img src="second-photo.jpg" alt="Abhishek — Secondary"
             onerror="this.outerHTML='<div class=\'photo-placeholder\'><span>Second Photo<br>second-photo.jpg</span></div>'">
         </div>
-
         <div class="contact-card">
           <div class="contact-label" data-key="Contact Information">Contact Information</div>
           <div class="contact-name" data-key="( Self )">Self</div>
@@ -873,15 +946,13 @@ body {
           <div class="contact-name" data-key="( Father )">Father</div>
           <div class="contact-num">+91 98902 85233</div>
         </div>
-
       </div>
+
     </div>
-  </div>
+  </div><!-- /body -->
 
-  <!-- ── BOTTOM ── -->
+  <!-- BOTTOM -->
   <div class="bottom">
-
-    <!-- Expectations -->
     <div class="expectations-wrap">
       <div class="section-header" style="margin-bottom:6px;">
         <div class="section-title" data-key="Expectations">Expectations</div>
@@ -893,29 +964,24 @@ body {
         </p>
       </div>
     </div>
-
-    <!-- Address -->
     <div class="address-bar">
       <span class="address-icon">⌂</span>
       <div class="address-text" data-key="Plot 9, 260 / 2/2A, Opp. Badrinath Temple, Kalwad, Lohegaon, Pune – 411 032, Maharashtra">
         Plot 9, 260 / 2/2A, Opp. Badrinath Temple, Kalwad, Lohegaon, Pune – 411 032, Maharashtra
       </div>
     </div>
-
-    <!-- Footer -->
     <div class="footer">
       <div class="footer-line"></div>
       <div class="footer-text">॥ ॐ शुभम् भवतु ॥</div>
       <div class="footer-line r"></div>
     </div>
-
   </div>
 
 </div>
 </div>
 
 <script>
-/* ── Responsive scaling ─────────────────────── */
+/* ── Scaling ─────────────────────────────────── */
 const shell = document.getElementById('shell');
 const PAGE_W = 794, PAGE_H = 1123;
 
@@ -925,18 +991,14 @@ function fit() {
   const scale = Math.min(1, (window.innerWidth - pad) / PAGE_W);
   shell.style.cssText = `--scale:${scale}; width:${PAGE_W*scale}px; height:${PAGE_H*scale}px;`;
 }
-
 window.addEventListener('load', fit);
 window.addEventListener('resize', fit);
 if (document.fonts) document.fonts.ready.then(fit);
 fit();
-
-window.addEventListener('beforeprint', () => {
-  shell.style.cssText = `--scale:1; width:210mm; height:297mm;`;
-});
+window.addEventListener('beforeprint', () => { shell.style.cssText = `--scale:1; width:210mm; height:297mm;`; });
 window.addEventListener('afterprint', fit);
 
-/* ── Translation ────────────────────────────── */
+/* ── Translation data ────────────────────────── */
 const LABEL = {
   en: {
     'Personal Details':'Personal Details','Date of Birth':'Date of Birth','Age':'Age',
@@ -993,11 +1055,11 @@ const VALUE = {
     'Software Developer':'सॉफ्टवेअर डेव्हलपर','Razorpay':'Razorpay','₹ 32 LPA':'₹ 32 लाख/वर्ष',
     'Bengaluru':'बेंगळूर','Bachelor of Engineering (B.E.)':'अभियांत्रिकी पदवी (B.E.)',
     'Progressive &amp; Financially Stable':'प्रगतशील व आर्थिकदृष्ट्या स्थिर',
-    'Yeshwant Suresh Jadhav':'येशवंत सुरेश जाधव','Business - Govt. Contractor':'व्यवसाय – सरकारी कंत्राटदार',
-    'Vaishali Yeshwant Jadhav':'वैशाली येशवंत जाधव','Homemaker':'गृहिणी',
-    'Pranjali Jadhav (Married)':'प्राजक्ती जाधव (विवाहित)',
+    'Yeshwant Suresh Jadhav':'यशवंत सुरेश जाधव','Business - Govt. Contractor':'व्यवसाय – सरकारी कंत्राटदार',
+    'Vaishali Yeshwant Jadhav':'वैशाली यशवंत जाधव','Homemaker':'गृहिणी',
+    'Pranjali Jadhav (Married)':'प्रांजली जाधव (विवाहित)',
     'Assoc. Director, Pvt. Organisation':'सहायक संचालक, खाजगी संस्था',
-    'Shubham Kamde':'शुभम कामदे','Mgmt. Consultant, Accenture':'व्यवस्थापन सल्लागार, Accenture',
+    'Shubham Kamde':'शुभम कामडे','Mgmt. Consultant, Accenture':'व्यवस्थापन सल्लागार, Accenture',
     'Plot 9, 260 / 2/2A, Opp. Badrinath Temple, Kalwad, Lohegaon, Pune – 411 032, Maharashtra':'प्लॉट 9, 260/2/2A, बद्रीनाथ मंदिरासमोर, कळवड, लोहेगाव, पुणे – 411 032, महाराष्ट्र',
     '( Self )':'स्वतः','( Father )':'वडील'
   }
@@ -1019,14 +1081,21 @@ let lang = 'en';
 function toggleLang() {
   lang = lang === 'en' ? 'mr' : 'en';
   document.getElementById('langBtn').textContent = lang === 'en' ? 'मराठीत बघा' : 'View in English';
+
+  // Toggle Marathi font class on page root
+  const page = document.getElementById('page');
+  page.classList.toggle('lang-mr', lang === 'mr');
+
   applyLang();
 }
 
 function applyLang() {
   document.querySelectorAll('[data-key]').forEach(el => {
     const k = el.dataset.key;
-    const dict = el.classList.contains('section-title') || el.classList.contains('info-label') || el.classList.contains('contact-label')
-      ? LABEL : VALUE;
+    const isLabel = el.classList.contains('section-title') ||
+                    el.classList.contains('info-label') ||
+                    el.classList.contains('contact-label');
+    const dict = isLabel ? LABEL : VALUE;
     if (dict[lang] && dict[lang][k] !== undefined) el.textContent = dict[lang][k];
   });
   document.getElementById('about-text').textContent = PARA[lang].about;
